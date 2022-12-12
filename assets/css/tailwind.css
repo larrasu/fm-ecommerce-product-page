@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply antialiased;
+    @apply antialiased text-accent-100;
   }
 }
 
@@ -18,6 +18,8 @@
   .header-end {
     @apply flex items-center gap-4 ml-auto;
   }
+
+  /* Drawer */
   .drawer-container {
     @apply fixed inset-0 overflow-hidden;
   }
@@ -25,7 +27,7 @@
     @apply bg-black/70 fixed inset-0 transition-opacity -z-10;
   }
   .drawer {
-    @apply fixed bg-white h-screen top-0 left-0 px-5 py-4 z-10 transition-all ease-in-out;
+    @apply fixed bg-white h-screen top-0 left-0 px-5 py-4 z-50 transition-all ease-in-out;
   }
   .drawer-open {
     @apply md:hidden;
@@ -35,5 +37,78 @@
   }
   .drawer-menu {
     @apply flex-col gap-4 mt-20 font-bold;
+  }
+
+  /* Cart */
+  .cart-wrapper {
+    @apply absolute px-2 pt-2 w-full transform transition ease-in-out overflow-hidden z-20;
+  }
+  .cart-overlay {
+    @apply fixed inset-0 transition-opacity -z-10;
+  }
+  .cart {
+    @apply bg-white rounded-lg shadow-2xl h-[250px];
+  }
+  .cart-heading {
+    @apply px-5 py-4 border-b border-accent-400 font-bold;
+  }
+  .cart-body {
+    @apply px-5 py-4 h-auto min-h-[180px];
+  }
+  .cart-body > .empty {
+    @apply text-center font-bold text-accent-200;
+  }
+
+  /* Lightbox */
+  .lightbox {
+    @apply h-[300px] md:h-auto w-full relative;
+  }
+  .prev,
+  .next {
+    @apply absolute bg-white rounded-full px-5 py-4 top-1/2 md:hidden z-[5];
+  }
+  .prev {
+    @apply left-5;
+  }
+  .next {
+    @apply right-5;
+  }
+
+  /* Product */
+  .product {
+    @apply p-5;
+  }
+  .tag {
+    @apply text-primary-100 text-sm uppercase tracking-widest font-bold;
+  }
+  .title {
+    @apply font-bold text-3xl;
+  }
+  .desc {
+    @apply text-accent-200 mt-3;
+  }
+  .details {
+    @apply flex items-center mt-4;
+  }
+  .price {
+    @apply font-bold text-3xl;
+  }
+  .disc {
+    @apply text-primary-100 bg-primary-200 rounded-md px-2 py-1 font-bold;
+  }
+  .old {
+    @apply ml-auto text-accent-300 line-through font-bold;
+  }
+  .qty {
+    @apply flex justify-between px-5 py-4 bg-accent-400 rounded-md font-bold mt-4;
+  }
+  .btn-icon {
+    @apply flex items-center justify-center gap-2;
+  }
+  .btn-primary {
+    @apply bg-primary-100 text-primary-200 rounded-md w-full px-5 py-4 font-bold hover:bg-primary-100/70 transition;
+  }
+  .btn-glow {
+    @apply shadow-xl shadow-primary-100/30;
   }
 }
