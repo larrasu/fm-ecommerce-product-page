@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .header {
+    @apply flex items-center gap-4 px-5 py-4;
+  }
+  .header-end {
+    @apply flex items-center gap-4 ml-auto;
+  }
+  .drawer-backdrop {
+    @apply bg-black/70 absolute inset-0;
+  }
+  .drawer {
+    @apply bg-white h-screen w-3/4;
+  }
+}
