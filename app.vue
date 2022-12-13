@@ -26,10 +26,12 @@
         <div class="md:flex items-center gap-4">
           <div class="qty">
             <button @click="removeQty" class="transition hover:opacity-50">
+              <span class="sr-only">Remove quantity</span>
               <img src="~/assets/images/icon-minus.svg" alt="Remove" />
             </button>
             <div>{{ qty }}</div>
             <button @click="addQty" class="transition hover:opacity-50">
+              <span class="sr-only">Add quantity</span>
               <img src="~/assets/images/icon-plus.svg" alt="Add" />
             </button>
           </div>

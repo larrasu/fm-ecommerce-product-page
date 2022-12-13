@@ -51,6 +51,7 @@
       <div class="lightbox-content">
         <div class="lightbox-image">
           <button @click="showModal = false" class="float-right">
+            <span class="sr-only">Close</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -65,9 +66,11 @@
             </svg>
           </button>
           <button @click="prev" class="prev">
+            <span class="sr-only">Previous</span>
             <img src="~/assets/images/icon-previous.svg" alt="Previous" />
           </button>
           <button @click="next" class="next">
+            <span class="sr-only">Next</span>
             <img src="~/assets/images/icon-next.svg" alt="Next" />
           </button>
           <img

@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   app: {
     head: {
+      htmlAttrs: {
+        lang: "en",
+      },
       title: "Frontend Mentor | E-commerce Product Page",
       link: [
         {

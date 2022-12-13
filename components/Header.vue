@@ -3,6 +3,7 @@
     <div class="header">
       <div class="drawer-open">
         <button @click="toggleMenu">
+          <span class="sr-only">Open menu</span>
           <img src="~/assets/images/icon-menu.svg" alt="Menu" />
         </button>
       </div>
@@ -18,6 +19,7 @@
       </nav>
       <div class="header-end">
         <button @click="toggleCart" class="group relative">
+          <span class="sr-only">View cart</span>
           <div
             v-for="item of cart"
             class="bg-primary-100 text-white px-2 text-xs absolute -right-2 rounded-full -top-2"
@@ -37,7 +39,12 @@
         <button
           class="transition border-2 hover:border-primary-100 rounded-full"
         >
-          <img src="~/assets/images/image-avatar.png" alt="User" class="w-10" />
+          <span class="sr-only">User</span>
+          <img
+            src="~/assets/images/image-avatar.png"
+            alt="User's avatar"
+            class="w-10"
+          />
         </button>
       </div>
     </div>
@@ -76,11 +83,12 @@
             </div>
             <div>
               <button @click="$emit('deleteItem', item.id)">
+                <span class="sr-only">Delete item</span>
                 <img src="~/assets/images/icon-delete.svg" alt="" />
               </button>
             </div>
           </div>
-          <button v-if="cart != ''" class="btn-primary">Checkout</button>
+          <button v-if="cart" class="btn-primary">Checkout</button>
         </div>
       </div>
     </div>
