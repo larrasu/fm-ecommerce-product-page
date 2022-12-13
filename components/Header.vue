@@ -88,7 +88,7 @@
               </button>
             </div>
           </div>
-          <button v-if="cart" class="btn-primary">Checkout</button>
+          <button v-if="cart != ''" class="btn-primary">Checkout</button>
         </div>
       </div>
     </div>
