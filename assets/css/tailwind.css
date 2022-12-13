@@ -47,7 +47,7 @@
 
   /* Cart */
   .cart-wrapper {
-    @apply absolute px-2 pt-2 pb-20 md:px-10 w-full md:max-w-md md:right-0 xl:right-80 transform transition ease-in-out overflow-hidden z-20;
+    @apply absolute px-2 pt-2 pb-20 md:px-10 w-full md:max-w-md md:right-0 xl:right-28 2xl:right-80 transform transition ease-in-out overflow-hidden z-20;
   }
   .cart-overlay {
     @apply fixed inset-0 transition-opacity -z-10;
